@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/styles.css" type="stylesheet" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
+    
     <title>GENERALI</title>
 </head>
 <body>
-    <header>
-        <img src="../assets/logo.png" />
+    <script src="./index.js"></script>
 
-        <nav>
+    <header class="main-header">
+        <img class="logo" src="../assets/logo.png" alt="" />
+
+        <nav class="main-navbar">
             <a href="/info">Informazioni</a>
             <a href="/ceo">CEO</a>
             <a href="/earn">Iniziare a guadagnare subito</a>
@@ -18,14 +35,14 @@
     </header>
 
     <main>
-        <section>
-            <section>
+        <section class="authorization-block two-columns">
+            <section class="fit">
                 <p>Investire 250 euro per raggiungere 5000 euro in una settimanà vi sembra impossibile?</p>
                 <p>Con il Gruppo Generali potete fare ancora di più!</p>
             </section>
 
-            <div>
-                <form>
+            <div class="auth-form-wrapper">
+                <form class="auth-form">
                     <input type="text" id="name" name="name" placeholder="Il suo nome" />
                     <input type="text" id="second-name" name="second-name" placeholder="Il suo cog" />
                     <input type="email" id="email" name="email" placeholder="E-mail" />
@@ -35,36 +52,38 @@
             </div>
         </section>
 
-        <section>
-            <div></div>
+        <section class="purpose-block two-columns">
+            <div class="rectangle-wrapper">
+                <img src="../assets/rectangle.svg" alt="" />
+            </div>
 
-            <article>
+            <article class="purpose-wrapper">
                 <h3>Il nostro scopo</h3>
                 <p>Siamo qui per promuovere lo sviluppo e la circolazione delle persone, delle imprese e del Paese.</p>
             </article>
         </section>
 
-        <article>
+        <article class="service-block">
             <h2>Inizia a servire con noi</h2>
 
-            <section>
-                <article>
-                    <img src="../assets/person.svg" />
+            <section class="services-wrapper">
+                <article class="service-info">
+                    <img src="../assets/person.svg" alt=""/>
                     <h3>Registrazione</h3>
                     <p>Compilare tutti i campi del modulo di registrazione sul sito web.</p>
                     <input type="button" value="Iniziare" />
                 </article>
 
-                <article>
-                    <img src="../assets/detective.svg" />
+                <article class="service-info">
+                    <img src="../assets/detective.svg" alt="" />
                     <h3>Consultazione di esperti</h3>
                     <p>Dopo la registrazione, rispondere all'invito del Consulente di supporto di Petrol Energia e seguire 
                        tutte le sue istruzioni.</p>
                     <input type="button" value="Iniziare" />
                 </article>
 
-                <article>
-                    <img src="../assets/tree.svg" />
+                <article class="service-info">
+                    <img src="../assets/tree.svg" alt="" />
                     <h3>Deposito</h3>
                     <p>Dopo la verifica, è necessario depositare un minimo di 250 euro sul conto dell'azionista.</p>
                     <input type="button" value="Iniziare" />
@@ -72,10 +91,10 @@
             </section>
         </article>
 
-        <div>
-            <section>
+        <div class="gradient-background">
+            <section class="person-info-block">
                 <figure>
-                    <img src="../assets/philippe_donnet.png" />
+                    <img src="../assets/philippe_donnet.png" alt="" />
                 </figure>
 
                 <p>Philippe Donnet, amministratore delegato di Generali, ha appena festeggiato dieci anni in Italia e 
@@ -94,49 +113,55 @@
                    le energie imprenditoriali”.</p>
             </section>
 
-            <article>
+            <article class="profit-info-block" lang="hr">
                 <h2>Potencijal dobiti</h2>
                 
-                <section>
-                    <form>
+                <section class="profit-info-wrapper">
+                    <form class="profit-calculator">
                         <input type="text" id="term" name="term" value="" />
                         <input type="text" id="sum" name="sum" value=""  />
                         <button>
-                            Moguća dobit: <span id="profit"></span>
+                            Moguća dobit: <span id="profit">€ 8600</span>
                         </button>
                     </form>
 
-                    <section>
-                        <h3>Ukupna dobit korisnika:</h3>
-                        <p>€ 128 567 000</p>
-                    </section>
+                    <section class="general-info">
+                        <div>
+                            <section class="info-section">
+                                <h3>Ukupna dobit korisnika:</h3>
+                                <p>€ 128 567 000</p>
+                            </section>
 
-                    <section>
-                        <h3>Aktivni korisnici:</h3>
-                        <p>77 335</p>
+                            <section class="info-section">
+                                <h3>Aktivni korisnici:</h3>
+                                <p>77 335</p>
+                            </section>
+                        </div>
                     </section>
                 </section>
             </article>
         </div>
 
-        <div class="glide">
-            <div data-glide-el="track" class="glide__track">
+        <div class="glide quotes-block">
+            <div data-glide-el="track" class="glide__track quotes-wrapper">
                 <ul class="glide__slides">
                     <li class="glide__slide">
-                        <blockquote>
+                        <blockquote class="quote">
                             <header>
-                                <img src="../assets/quote_authors/quote_author_1.png" />
-
                                 <div>
-                                    <h3>Jeff Bezos:</h3>
-                                    <p>Technologieunternehmer, Investor und Philanthrop</p>
-                                    <address>
-                                        <a><img src="../assets/facebook.svg" /></a>
-                                    </address>
+                                    <img class="author-photo" src="../assets/quote_authors/quote_author_1.png" />
+
+                                    <div class="author-info">
+                                        <h3>Jeff Bezos:</h3>
+                                        <p>Technologieunternehmer, Investor und Philanthrop</p>
+                                        <address>
+                                            <a><img src="../assets/facebook.svg" /></a>
+                                        </address>
+                                    </div>
                                 </div>
                             </header>
 
-                            <div></div>
+                            <div class="quote-delimeter"></div>
 
                             <p>Dem Quantencomputing gehört die Zukunft. Ich übertreibe nicht, wenn ich sage, es wird
                                 alles verändern wird. Das Quantencomputing steht noch ganz am Anfang; nicht viele
@@ -146,20 +171,22 @@
                     </li>
 
                     <li class="glide__slide">
-                        <blockquote>
+                        <blockquote class="quote">
                             <header>
-                                <img src="../assets/quote_authors/quote_author_2.png" />
-
                                 <div>
-                                    <h3>Bill Gates:</h3>
-                                    <p>Wirtschaftsmagnat, Investor, Autor, Philanthrop und Menschenfreund</p>
-                                    <address>
-                                        <a><img src="../assets/facebook.svg" /></a>
-                                    </address>
+                                    <img class="author-photo" src="../assets/quote_authors/quote_author_2.png" />
+
+                                    <div class="author-info">
+                                        <h3>Bill Gates:</h3>
+                                        <p>Wirtschaftsmagnat, Investor, Autor, Philanthrop und Menschenfreund</p>
+                                        <address>
+                                            <a><img src="../assets/facebook.svg" /></a>
+                                        </address>
+                                    </div>
                                 </div>
                             </header>
 
-                            <div></div>
+                            <div class="quote-delimeter"></div>
 
                             <p>Ich weiß mit Sicherheit, dass Elon 3 Milliarden Dollar von seinem eigenen Geld ausgegeben
                                 hat, um dieses Programm zu finanzieren. Hut ab vor ihm - das sind 3 Milliarden Dollar von
@@ -170,20 +197,22 @@
                     </li>
 
                     <li class="glide__slide">
-                        <blockquote>
+                        <blockquote class="quote">
                             <header>
-                                <img src="../assets/quote_authors/quote_author_3.png" />
-
                                 <div>
-                                    <h3>Bill Gates:</h3>
-                                    <p>Wirtschaftsmagnat, Investor, Autor, Philanthrop und Menschenfreund</p>
-                                    <address>
-                                        <a><img src="../assets/facebook.svg" /></a>
-                                    </address>
+                                    <img class="author-photo" src="../assets/quote_authors/quote_author_3.png" />
+
+                                    <div class="author-info">
+                                        <h3>Bill Gates:</h3>
+                                        <p>Wirtschaftsmagnat, Investor, Autor, Philanthrop und Menschenfreund</p>
+                                        <address>
+                                            <a><img src="../assets/facebook.svg" /></a>
+                                        </address>
+                                    </div>
                                 </div>
                             </header>
 
-                            <div></div>
+                            <div class="quote-delimeter"></div>
 
                             <p>Ich weiß mit Sicherheit, dass Elon 3 Milliarden Dollar von seinem eigenen Geld ausgegeben
                                 hat, um dieses Programm zu finanzieren. Hut ab vor ihm - das sind 3 Milliarden Dollar von
@@ -194,20 +223,22 @@
                     </li>
 
                     <li class="glide__slide">
-                        <blockquote>
+                        <blockquote class="quote">
                             <header>
-                                <img src="../assets/quote_authors/quote_author_4.png" />
-
                                 <div>
-                                    <h3>Bill Gates:</h3>
-                                    <p>Wirtschaftsmagnat, Investor, Autor, Philanthrop und Menschenfreund</p>
-                                    <address>
-                                        <a><img src="../assets/facebook.svg" /></a>
-                                    </address>
+                                    <img class="author-photo" src="../assets/quote_authors/quote_author_4.png" />
+
+                                    <div class="author-info">
+                                        <h3>Bill Gates:</h3>
+                                        <p>Wirtschaftsmagnat, Investor, Autor, Philanthrop und Menschenfreund</p>
+                                        <address>
+                                            <a><img src="../assets/facebook.svg" /></a>
+                                        </address>
+                                    </div>
                                 </div>
                             </header>
 
-                            <div></div>
+                            <div class="quote-delimeter"></div>
 
                             <p>Ich weiß mit Sicherheit, dass Elon 3 Milliarden Dollar von seinem eigenen Geld ausgegeben
                                 hat, um dieses Programm zu finanzieren. Hut ab vor ihm - das sind 3 Milliarden Dollar von
@@ -218,20 +249,22 @@
                     </li>
 
                     <li class="glide__slide">
-                        <blockquote>
+                        <blockquote class="quote">
                             <header>
-                                <img src="../assets/quote_authors/quote_author_5.png" />
-
                                 <div>
-                                    <h3>Bill Gates:</h3>
-                                    <p>Wirtschaftsmagnat, Investor, Autor, Philanthrop und Menschenfreund</p>
-                                    <address>
-                                        <a><img src="../assets/facebook.svg" /></a>
-                                    </address>
+                                    <img class="author-photo" src="../assets/quote_authors/quote_author_5.png" />
+
+                                    <div class="author-info">
+                                        <h3>Bill Gates:</h3>
+                                        <p>Wirtschaftsmagnat, Investor, Autor, Philanthrop und Menschenfreund</p>
+                                        <address>
+                                            <a><img src="../assets/facebook.svg" /></a>
+                                        </address>
+                                    </div>
                                 </div>
                             </header>
 
-                            <div></div>
+                            <div class="quote-delimeter"></div>
 
                             <p>Ich weiß mit Sicherheit, dass Elon 3 Milliarden Dollar von seinem eigenen Geld ausgegeben
                                 hat, um dieses Programm zu finanzieren. Hut ab vor ihm - das sind 3 Milliarden Dollar von
@@ -244,30 +277,38 @@
             </div>
         </div>
 
-        <section>
+        <section class="shareholders-block">
             <h2>Gli azionisti dell'azienda</h2>
 
-            <div>
-                <img src="../assets/companies/mediobanca.png" />
-                <img src="../assets/companies/unicredit.png" />
-                <img src="../assets/companies/banca_ditalia.png" />
-                <img src="../assets/companies/bnd_holdings.png" />
-                <img src="../assets/companies/carlo_tassara.png" />
-                <img src="../assets/companies/generali.png" />
+            <div class="companies-wrapper">
+                <div>
+                    <img src="../assets/companies/mediobanca.png" alt="Mediobanca company logo" />
+                    <img src="../assets/companies/unicredit.png" alt="Unicredit company logo" />
+                    <img src="../assets/companies/banca_ditalia.png" alt="Banca d`Italia company logo" />
+                </div>
+                <div>
+                    <img src="../assets/companies/bnd_holdings.png" alt="B&D Holdings company logo" />
+                    <img src="../assets/companies/carlo_tassara.png" alt="Carlo Tassara company logo" />
+                    <img src="../assets/companies/generali.png" alt="Generali company logo" />
+                </div>
             </div>
         </section>
 
-        <footer>
+        <footer class="main-footer">
             <img src="../assets/logo.png" />
 
             <nav>
-                <a>Mappa del sito</a>
-                <a>Termini di utilizzo</a>
-                <a>Avviso di accessibilità</a>
-                <a>Gestione dei Cookie</a>
-                <a>Politica sulla protezione dei dati e informativa sulla privacy</a>
-                <a>Avviso di frode Web e phishing</a>
-                <a>Politica sui reclami – Australia</a>
+                <div>
+                    <a>Mappa del sito</a>
+                    <a>Termini di utilizzo</a>
+                    <a>Avviso di accessibilità</a>
+                    <a>Gestione dei Cookie</a>
+                    <a>Politica sulla protezione dei dati e informativa sulla privacy</a>
+                </div>
+                <div>
+                    <a>Avviso di frode Web e phishing</a>
+                    <a>Politica sui reclami – Australia</a>
+                </div>
             </nav>
         </footer>
     </main>
