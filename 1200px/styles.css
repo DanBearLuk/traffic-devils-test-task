@@ -89,7 +89,6 @@ main {
     margin-bottom: 11px;
     padding: 0 12px;
     border-radius: 4px;
-    color: #818181;
     font: 400 16px 'Open Sans', monospace;
     text-transform: uppercase;
     background: #F7F7F7;
@@ -104,6 +103,18 @@ main {
 
 .phone-input {
     border-radius: 4px;
+}
+
+.phone-input.invalid {
+    animation: 0.25s linear shake;
+}
+
+@keyframes shake {
+    0%   { transform: translateX( 0px); }
+    25%  { transform: translateX( 5px); }
+    50%  { transform: translateX( 0px); }
+    75%  { transform: translateX(-5px); }
+    100% { transform: translateX( 0px); }
 }
 
 .phone-input .iti__country-container {

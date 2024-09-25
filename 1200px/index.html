@@ -42,11 +42,13 @@
             </section>
 
             <div class="auth-form-wrapper">
-                <form class="auth-form">
-                    <input type="text" id="name" name="name" placeholder="Il suo nome" />
-                    <input type="text" id="second-name" name="second-name" placeholder="Il suo cog" />
-                    <input type="email" id="email" name="email" placeholder="E-mail" />
-                    <input type="tel" id="phone" name="phone" />
+                <form class="auth-form" id="auth">
+                    <input type="text" name="first-name" placeholder="Il suo nome" 
+                           autocomplete="given-name" pattern="^[a-zA-Z ,\.'\-]+$" required />
+                    <input type="text" name="second-name" placeholder="Il suo cog" 
+                           autocomplete="family-name" pattern="^[a-zA-Z ,\.'\-]+$" required />
+                    <input type="email" name="email" placeholder="E-mail" autocomplete="email" required />
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="^[ +0-9]+$" required />
                     <input type="submit" value="Registrati" />
                 </form>
             </div>
@@ -142,7 +144,7 @@
             </article>
         </div>
 
-        <div class="glide quotes-block">
+        <div class="glide quotes-block" lang="de">
             <div data-glide-el="track" class="glide__track quotes-wrapper">
                 <ul class="glide__slides">
                     <li class="glide__slide">
